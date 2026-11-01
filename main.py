@@ -1,6 +1,5 @@
 SEPARATOR = ";"
 
-
 def readValues(filename):
     values: str = ""
     file = open(filename, "r")
@@ -14,8 +13,7 @@ def readValues(filename):
     file.close()
     return values
 
-
-def analyseNumbers(values):
+def analyseValues(values):
     total = 0
     count = 0
     greatest = 0
@@ -44,10 +42,10 @@ def displayResults(filename: str, results: str):
     print()
     print("#### Number analysis - END ####")
 
-
-print("Program starting.")
-filename = input("Insert filename: ")
-values = readValues(filename)
-results = analyseNumbers(values)
-displayResults(filename, results)
-print("Program ending.")
+if __name__ == "__main__":
+    print("Program starting.")
+    filename = input("Insert filename: ")
+    values = readValues(filename)
+    results = analyseValues(values)
+    displayResults(filename, results)
+    print("Program ending.")
